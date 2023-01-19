@@ -1,33 +1,22 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>My HTML Page</title>
-	</head>
-	<body>
-		<img src="image.jpg" alt="Page Graphic" />
+<html lang="en">
+  <head>
+    <title>My HTML Page</title>
+  </head>
+  <body>
+    <!-- <img src="image.jpg" alt="Page Graphic" /> -->
 
-		<ul>
-			<li>
-				<a onclick="clickLink(this)" href="javascript: void(0)"
-					>Google.com</a
-				>
-			</li>
-			<li>
-				<a onclick="clickLink(this)" href="javascript: void(0)"
-					>W3Schools</a
-				>
-			</li>
-		</ul>
-		<button onmouseover="focusButton(this)">Button 1</button>
-		<button onmouseover="focusButton(this)">Button 2</button>
-		<button onmouseover="focusButton(this)">Button 3</button>
-		<script>
-			function clickLink(e) {
-				alert("I'm going to take you to " + e.innerHTML);
-			}
-			function focusButton(e) {
-				e.style.backgroundColor = "#000000";
-			}
-		</script>
-	</body>
+    <ul>
+      <li>
+        <a href="">Google.com</a>
+      </li>
+      <li>
+        <a href="">W3Schools</a>
+      </li>
+    </ul>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+    <script src="./scripts/events-starter.js"></script>
+  </body>
 </html>
