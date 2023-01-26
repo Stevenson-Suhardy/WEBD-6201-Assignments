@@ -15,7 +15,7 @@
 }
 
 div.main-content > div {
-    margin:10px;
+    margin:10px; font-family: 'Calistoga', cursive;
 }
 
 #functions {

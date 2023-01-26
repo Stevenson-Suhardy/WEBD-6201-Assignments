@@ -1,4 +1,4 @@
-console.log("formValidation.js loaded");
+// console.log("formValidation.js loaded");
 
 /**
  * Validate the email address
@@ -29,7 +29,7 @@ function ValidateEmailAddressSimple(emailString) {
 function ValidateEmailAddressRegex(emailString) {
     //the regular expression to validate the email address for string+string|number bewten 2-20 characters
     // note the / and / at the beginning and end of the expression
-    var emailRegex = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/;
+    var emailRegex = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/;
 
     //return true if the email address is valid - how to use regex
 	return !!emailString && typeof emailString === 'string'
