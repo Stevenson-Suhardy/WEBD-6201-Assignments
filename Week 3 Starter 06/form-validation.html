@@ -42,7 +42,7 @@
 			<div class="form-group col-md-6">
 				<label for="inputPassword4">Password</label>
 				<input
-					type="text"
+					type="password"
 					class="form-control"
 					id="inputPassword4"
 					placeholder="Password"
@@ -57,7 +57,8 @@
 					type="tel"
 					class="form-control"
 					id="inputPhone5"
-					placeholder="Phone Number"
+					placeholder="999-888-7777"
+					pattern="\d{3}[\-]\d{3}[\-]\d{4}"
 					required
 				/>
 				<p id="phoneError"></p>
@@ -70,7 +71,7 @@
 					value="Send"
 					name="Submit"
 				/>
-				<input type="reset" value="Reset" name="Reset" />
+				<input type="reset" id="reset-reg-form" value="Reset" name="Reset" />
 			</div>
 		</form>
 		<script src="./scripts/formValidation.js"></script>
