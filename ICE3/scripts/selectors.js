@@ -49,15 +49,36 @@ function filtering() {
 }
 
 function addingReplacingRemoving() {
+  // Last child
   $("ul ul:first").append($("<li>I'm going to be the last item</li>"));
 
+  // Reverse syntax
   $("<li>Now, I'm going to be the last item</li>").appendTo("ul ul:first");
 
+  // First child
   $("ul ul:first").prepend($("<li>I'm going to be the last item</li>"));
 
+  // Reverse syntax
   $("<li>Now I'm first!!</li>").prependTo("ul ul:first");
 
+  // Creating another red box
   $(".red-box").after("<div class='red-box'>Another Red Box</div>");
+
+  // Sample text
+  let text1 = "Last night, Darth Vader came down from planet Vulcan.";
+
+  // replace with the new element
+  $("li").replaceWith(`<li>${text1}</li>`);
+
+  // replace all
+  $("<div class='green-box'>Created Green Box</div>").replaceAll(".red-box");
+
+  // remove
+  //   $("li").remove();
+
+  // detaching
+  let detachedItems = $("li").detach();
+  $("#content").append(detachedItems);
 }
 
 addingReplacingRemoving();
