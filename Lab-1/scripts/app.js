@@ -21,7 +21,6 @@ let divFooter = document.createElement("div");
 divFooter.className = "container-fluid";
 
 let footerText = document.createElement("p");
-footerText.className = "font-weight-bold";
 footerText.innerHTML = "&copy; Copyright 2023";
 
 divFooter.appendChild(footerText);

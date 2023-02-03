@@ -4,8 +4,11 @@ function timedRedirect(e) {
   let contactNumber = document.getElementById("contactNumber").value;
   let message = document.getElementById("message").value;
 
-  e.preventDefault();
-  if (fullName != "" && contactEmail != "" && contactNumber != "" && message != "") {
+  let form = document.getElementById("contactForm");
+
+  if (form.checkValidity()) {
+    e.preventDefault();
+
     console.log("Name: " + fullName);
     console.log("Email: " + contactEmail);
     console.log("Phone Number: " + contactNumber);
