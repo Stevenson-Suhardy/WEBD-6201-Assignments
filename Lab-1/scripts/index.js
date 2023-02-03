@@ -1,7 +1,6 @@
 
 let div = document.createElement("div");
-div.className = "container-fluid";
-div.align = "center";
+div.className = "container-fluid text-center";
 let welcomeImage = document.createElement("img");
 
 welcomeImage.src = "./images/welcome.png";
