@@ -1,6 +1,6 @@
 console.log('app.js loaded')
 // TO DO: load the user class script with alias
-
+import * as userClass from "./user.js";
 
 
 /**
@@ -99,47 +99,58 @@ if($("#speckled-excerpt")) {
 
 // FORM JQUERY
 // TO DO: import form validation functions with alias
+import * as formValidation from "./form.js";
 
 // if the submit button is on the page
-// if ($("#btnRegSubmit")) {
+if ($("#btnRegSubmit")) {
     // TO DO: add a click function that calls a callack function
-    // $("#btnRegSubmit").click(function (e) {
+    $("#btnRegSubmit").click(function (e) {
         // prevent the default submit action (stay on the page)
-
+        e.preventDefault();
         // create a new user
-        // you normally wouldn't do this unless you had validated, but we're going to do it to show how class memebers work in calling the validation
+        const newUser = new userClass.User(
+            // you normally wouldn't do this unless you had validated, but we're going to do it to show how class memebers work in calling the validation
 
             // get the first name input
-
+            $("#inputFirst").val(),
             // get the last name input
-
+            $("#inputLast").val(),
             // get the username input
-
+            $("#inputUsername").val(),
             // get the email input
-
+            $("#inputEmail").val(),
             // get the password input
-
-
+            $("#inputPassword").val()
+        );
 
         // debug statement for object
-        // console.log(`UserDetails: ${user.displayUser()}`)
+        // console.log(`UserDetails: ${newUser.displayUser()}`)
 
         // validate first name
-
+        $("#first-group").children(".errorMessage").html(formValidation.validateFirst(newUser.firstName));
         // validate last name
-
+        $("#last-group").children(".errorMessage").html(formValidation.validateLast(newUser.lastName));
         // validate  username
-
+        $("#username-group").children(".errorMessage").html(formValidation.validateUsername(newUser.username));
+        // validate email
+        $("#email-group").children(".errorMessage").html(formValidation.validateEmail(newUser.email));
         // validate confirm password
-
-// });
-// }
+        let error = formValidation.validatePassword(newUser.password, $("#inputPassword2").val())
+        $("#pass1-group").children(".errorMessage").html(error);
+        $("#pass2-group").children(".errorMessage").html(error);
+});
+}
 
 // TO DO: if reset button present
-
+if ($("#btnRegReset")) {
     // bind a click event handler
-
+    $("#btnRegReset").click(function() {
         // clear out all error message paragraphs
+        $(".errorMessage").text("");
+    })
+        
+}
+    
 
 
 
