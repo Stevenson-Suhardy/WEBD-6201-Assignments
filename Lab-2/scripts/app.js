@@ -27,6 +27,17 @@ hR.appendChild(hRLink);
 // Insert the hR list item before the contact us list item
 ul.insertBefore(hR, ul.children.item(4));
 
+let login = document.createElement("li");
+login.className = "nav-item";
+
+let loginLink = document.createElement("a");
+loginLink.className = "nav-link";
+loginLink.href = "./login.html";
+loginLink.innerHTML = "<i class=\"fa fa-sign-in\" aria-hidden=\"true\"></i> Login";
+
+login.appendChild(loginLink);
+ul.appendChild(login);
+
 // Creating footer
 // Creating a new navbar for footer along with the class
 let navFooter = document.createElement("nav");
