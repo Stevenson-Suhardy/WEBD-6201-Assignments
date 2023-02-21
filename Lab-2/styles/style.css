@@ -3,6 +3,10 @@
   color: #faead6;
 }
 
+.divInline {
+  display: inline-block;
+}
+
 .inputWithIcon input[type="text"],
 .inputWithIcon input[type="password"] {
   padding-left: 50px;
