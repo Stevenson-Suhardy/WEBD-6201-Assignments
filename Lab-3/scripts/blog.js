@@ -88,6 +88,7 @@ const getPosts = () => {
             $(`#user-${i}`).text(`Posted by User ID ${jsonRes[i]["userId"]}`);
         }
     })
+    .catch(err => console.log(err));
 }
 
 // Call the makePosts function
