@@ -1,11 +1,18 @@
-console.log("blog.js connected");
+/**
+ * Name: Stevenson Suhardy
+ * Student ID: 100839397
+ * Date Completed: March 16, 2023
+ */
 
+/**
+ * This function will make all the necessary HTML elements to create 20 posts with all the id of each element is set by utilizing a for loop. At the end, it will call 2 other function to populate the data with images, titles, and the content of the post
+ */
 const makePosts = () => {
     for (let i = 0; i < 20; i++) {
         let idNum = i;
         let postNum = i+1;
-
-        let card = $(`<div class="card blog"></div>`)
+        // Creating all necessary HTML element for a post
+        let card = $(`<div class="card blog text-center"></div>`)
                     .attr("id", `card-${idNum}`)
                     .appendTo($(".blog-column"));
 
@@ -13,6 +20,8 @@ const makePosts = () => {
         let body = $(`<div class="card-body blog"></div>`)
                     .attr("id", `card-body-${idNum}`)
                     .appendTo(card);
+
+        let br = $(`<br>`).appendTo($(".blog-column"));
 
         let title = $(`<h5 class="card-title blog"></h5>`)
                     .attr("id", `card-title-${idNum}`)
@@ -33,6 +42,9 @@ const makePosts = () => {
     }
 }
 
+/**
+ * This function is used to get pictures from pixabay using my account's API key. This function utilizes fetch to get data from the specified URL and then put the images inside the appropriate HTML img element
+ */
 const getPictures = () => {
     PIXABAY_KEY = "34271658-b6a1808a11231872bf5f80761";
     PIXABAY_URL = "https://pixabay.com/api/?key=<KEY>&q=dramatic&landscape&image_type=photo&per_page=21";
@@ -57,6 +69,9 @@ const getPictures = () => {
     .catch(err => console.log(err));
 }
 
+/**
+ * This function is used to get posts from a URL. This function utilizes fetch to get data from the specified URL and then put all the necessary data inside the appropriate HTML elements
+ */
 const getPosts = () => {
     const url = "https://jsonplaceholder.typicode.com/posts";
 
@@ -75,4 +90,5 @@ const getPosts = () => {
     })
 }
 
+// Call the makePosts function
 makePosts();

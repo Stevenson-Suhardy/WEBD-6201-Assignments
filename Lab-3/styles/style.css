@@ -1,3 +1,9 @@
+/**
+ * Name: Stevenson Suhardy
+ * Student ID: 100839397
+ * Date Completed: February 3, 2023
+ */
+
 #indexTitle,
 #indexContent {
   color: #faead6;
@@ -39,4 +45,32 @@
 .blog-pic {
   width: 200px;
   height: 1000px;
+}
+
+.blog-column {
+  background-color: lightsalmon;
+}
+
+.card {
+  background-color: rosybrown;
+  width: 50%;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-family: 'Impact', sans-serif;
+}
+
+.card-text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+[id^=post-] {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+[id^=user-] {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
