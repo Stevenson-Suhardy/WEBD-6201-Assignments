@@ -31,3 +31,12 @@
   padding: 9px 11px 11px;
   border-radius: 4px 0 0 4px;
 }
+
+#pixabay-logo {
+  width: 100px;
+}
+
+.blog-pic {
+  width: 200px;
+  height: 1000px;
+}

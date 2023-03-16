@@ -27,6 +27,21 @@ hR.appendChild(hRLink);
 // Insert the hR list item before the contact us list item
 ul.insertBefore(hR, ul.children.item(4));
 
+// Creating a new list item with the appropriate class
+let blog = document.createElement("li");
+blog.className = "nav-item";
+
+// Creating a new 'a' element along with the class, href, and innerHTML
+let blogLink = document.createElement("a");
+blogLink.className = "nav-link";
+blogLink.href = "./blog.html";
+blogLink.innerHTML = "<i class='fa-solid fa-blog'></i> Blog";
+
+// Inserting the link inside the list item
+blog.appendChild(blogLink);
+// Insert the hR list item before the contact us list item
+ul.insertBefore(blog, ul.children.item(5));
+
 let login = document.createElement("li");
 login.className = "nav-item";
 
@@ -41,7 +56,7 @@ ul.appendChild(login);
 // Creating footer
 // Creating a new navbar for footer along with the class
 let navFooter = document.createElement("nav");
-navFooter.className = "navbar fixed-bottom navbar-light bg-light";
+navFooter.className = "navbar navbar-light bg-light";
 
 // Creating div for the footer
 let divFooter = document.createElement("div");
