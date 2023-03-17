@@ -28,6 +28,10 @@ app.get("/about", (req, res) => {
     res.send("This is the about page for WEBD6201.");
 })
 
+app.get("/contact", (req, res) => {
+    res.render("contact");
+})
+
 // run the server
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
