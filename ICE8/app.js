@@ -19,18 +19,16 @@ app.use((req, res, next) => {
 
 // index route
 app.get('/', (req, res) => {
-    res.send(`Hello ${req.myName}, WEBD6201 World! Now improved with NODEMON`);
+    // render the home.handlebars
+    res.render("home");
 })
 
-app.post("/registration", (req, res) => {
-    res.send(`This is the registration page.`);
-})
-
+// about route
 app.get("/about", (req, res) => {
     res.send("This is the about page for WEBD6201.");
 })
 
-
+// run the server
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
 })
