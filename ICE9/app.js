@@ -19,6 +19,9 @@ app.engine(
 app.set("view engine", ".hbs");
 app.set("views", "./views");
 
+// ROUTES
+app.use('/', require("./routes/user.js"));
+
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
 })
