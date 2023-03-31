@@ -1,9 +1,9 @@
-// REQUIRES
 const express = require("express");
 const exphbs = require("express-handlebars");
 const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const path = require("path");
 
-// Pre-app config
 dotenv.config({ path: "./process.env"});
 
 const PORT = process.env.PORT;
