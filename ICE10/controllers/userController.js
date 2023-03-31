@@ -5,6 +5,19 @@ const homeView = (req, res) => {
     });
 };
 
+const formView = (req, res) => {
+    const pageTitle = "Registration Form";
+    res.render("form", {
+        pageTitle: pageTitle
+    })
+}
+
+const formSubmission = (req, res) => {
+    console.log(req.body);
+}
+
 module.exports = {
-    homeView
+    homeView,
+    formView,
+    formSubmission,
 }

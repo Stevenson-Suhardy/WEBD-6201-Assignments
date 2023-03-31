@@ -21,6 +21,9 @@ app.engine(
 app.set("view engine", ".hbs");
 app.set("views", "./views");
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // ROUTES
 app.use('/', require("./routes/user.js"));
 
