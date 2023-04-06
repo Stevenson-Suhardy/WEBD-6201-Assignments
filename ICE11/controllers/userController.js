@@ -82,7 +82,8 @@ const editUser = (req, res) => {
     User.findOne({_id: id}).lean().then((user) => {
         res.render("edit-user", {
             user: user,
-            id: id
+            id: id,
+            pageTitle: "Edit User"
         });
     });
 };
@@ -95,6 +96,14 @@ const updateUser = async (req, res) => {
     res.redirect("/user-list");
 }
 
+const deleteUser = async (req, res) => {
+    console.log("Deleting!");
+    const id = req.params.id;
+    const filter = { _id: id };
+    let deletedCount = await User.deleteOne(filter);
+    res.redirect("/user-list");
+};
+
 module.exports = {
     homeView,
     formView,
@@ -102,4 +111,5 @@ module.exports = {
     getAllUsers,
     editUser,
     updateUser,
+    deleteUser,
 }
