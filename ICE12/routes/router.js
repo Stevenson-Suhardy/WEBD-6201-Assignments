@@ -16,6 +16,11 @@ router.get('/', getIndex);
 
 router.get('/login', getLogin);
 
+router.post("/login", passport.authenticate("local", {
+	failureRedirect: "/login-failure",
+	successRedirect: "/login-success"
+}));
+
 router.get('/register', getRegister);
 router.post('/register', postRegister);
 
@@ -31,5 +36,6 @@ router.get('/login-success', loginSuccess);
 router.get('/login-failure', loginFailure);
 
 // CHECKS FOR AUTHORIZED ACCCESS BEFORE ALLOWING SEEING PROTECTED MATERIAL
+router.get("/protected-route", isAuth);
 
 module.exports = router;
