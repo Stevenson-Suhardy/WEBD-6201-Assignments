@@ -1,0 +1,19 @@
+{{#each animals}}
+<div class="card card-body mb-2">
+    <hr />
+    <p><b>Zoo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{zoo}}
+    </p>
+    <p><b>Scientific Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{scientificName}}</p>
+    <p><b>Given Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{givenName}}</p>
+    <p><b>Common Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{commonName}}</p>
+    <p><b>Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{gender}}
+    </p>
+    <p><b>Date Of Birth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{dateOfBirth}}</p>
+    <p><b>Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{age}}
+    </p>
+    <p><b>Transporability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{isTransportable}}</p>
+    <a class="btn btn-dark btn-block" href="/edit-animal/{{_id}}">Edit User</a>
+</div>
+{{else}}
+<p>No Animals</p>
+{{/each}}

@@ -1,0 +1,112 @@
+<div class='row justify-content-center'>
+    <div class='col-md-8'>
+        <h2>Add an Animal to the Database</h2>
+        <div class='card'>
+            <div class='card-header'>Add Animal</div>
+            <div class='card-body'>
+
+                <form class='form-horizontal' method='post' action='/form'>
+
+                    <div class='form-group'>
+                        <label for='fullName' class='cols-sm-2 control-label'>Home Zoo</label>
+                        <div class='cols-sm-10'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><i class='fa fa-user fa' aria-hidden='true'></i></span>
+                                <input type='text' class='form-control' name='zoo' id='zoo' />
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='email' class='cols-sm-2 control-label'>Scientific Name</label>
+                        <div class='cols-sm-10'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><i class='fa fa-envelope fa'
+                                        aria-hidden='true'></i></span>
+                                <input type='text' class='form-control' name='scientificName' id='scientificName' />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <label for='password' class='cols-sm-2 control-label'>Common Name</label>
+                        <div class='cols-sm-10'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><i class='fa fa-lock fa-lg'
+                                        aria-hidden='true'></i></span>
+                                <input type='text' class='form-control' name='commonName' id='commonName' />
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='confirm' class='cols-sm-2 control-label'>Given Name</label>
+                        <div class='cols-sm-10'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><i class='fa fa-lock fa-lg'
+                                        aria-hidden='true'></i></span>
+                                <input type='text' class='form-control' name='givenName' id='givenName' />
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='confirm' class='cols-sm-2 control-label'>Gender</label>
+                        <div class='cols-sm-10'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><i class='fa fa-lock fa-lg'
+                                        aria-hidden='true'></i></span>
+                                <input type='radio' id="male" name='gender' value="Male" />
+                                &nbsp;
+                                <label for="male">Male</label>
+                                &nbsp;
+                                <input type='radio' id="female" name='gender' value="Female" />
+                                &nbsp;
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='confirm' class='cols-sm-2 control-label'>Date Of Birth</label>
+                        <div class='cols-sm-10'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><i class='fa fa-lock fa-lg'
+                                        aria-hidden='true'></i></span>
+                                <input type='date' class='form-control' name='dateOfBirth' id='dateOfBirth' />
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='confirm' class='cols-sm-2 control-label'>Age</label>
+                        <div class='cols-sm-10'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><i class='fa fa-lock fa-lg'
+                                        aria-hidden='true'></i></span>
+                                <input type='text' class='form-control' name='age' id='age' />
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label for='confirm' class='cols-sm-2 control-label'>Is Transportable?</label>
+                        <div class='cols-sm-10'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><i class='fa fa-lock fa-lg'
+                                        aria-hidden='true'></i></span>
+                                <input type='radio' id="available" name='isTransportable' value="true" />
+                                &nbsp;
+                                <label for="male">Available</label>
+                                &nbsp;
+                                <input type='radio' id="unavailable" name='isTransportable' value="false" />
+                                &nbsp;
+                                <label for="female">Unavailable</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <button type='submit' class='btn btn-primary btn-lg btn-block login-button'>Add Animal to
+                            Database</button>
+                        <button type="reset" class='btn btn-primary btn-lg btn-block login-button'>Reset Form</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
