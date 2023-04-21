@@ -1,15 +1,116 @@
-<form action="/edit-animal/{{id}}" method="post">
-    <div class="form-group">
-        <label for="fullName">Full Name</label>
-        <input type="text" name="fullName" id="fullName" class="form-control" value="{{user.fullName}}" required>
+<form action="/animals/edit-animal/{{id}}" method="post">
+    <div class='form-group'>
+        <label for='fullName' class='cols-sm-2 control-label'>Home Zoo</label>
+        <div class='cols-sm-10'>
+            <div class='input-group'>
+                <span class='input-group-addon'><i class='fa fa-user fa' aria-hidden='true'></i></span>
+                <input type='text' class='form-control' name='zoo' id='zoo' value="{{animal.zoo}}" required />
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" class="form-control" value="{{user.email}}" required>
+    <div class='form-group'>
+        <label for='email' class='cols-sm-2 control-label'>Scientific Name</label>
+        <div class='cols-sm-10'>
+            <div class='input-group'>
+                <span class='input-group-addon'><i class='fa fa-envelope fa' aria-hidden='true'></i></span>
+                <input type='text' class='form-control' name='scientificName' id='scientificName'
+                    value="{{animal.scientificName}}" required />
+            </div>
+        </div>
+    </div>
+
+    <div class='form-group'>
+        <label for='password' class='cols-sm-2 control-label'>Common Name</label>
+        <div class='cols-sm-10'>
+            <div class='input-group'>
+                <span class='input-group-addon'><i class='fa fa-lock fa-lg' aria-hidden='true'></i></span>
+                <input type='text' class='form-control' name='commonName' id='commonName' value="{{animal.commonName}}"
+                    required />
+            </div>
+        </div>
+    </div>
+    <div class='form-group'>
+        <label for='confirm' class='cols-sm-2 control-label'>Given Name</label>
+        <div class='cols-sm-10'>
+            <div class='input-group'>
+                <span class='input-group-addon'><i class='fa fa-lock fa-lg' aria-hidden='true'></i></span>
+                <input type='text' class='form-control' name='givenName' id='givenName' value="{{animal.givenName}}"
+                    required />
+            </div>
+        </div>
+    </div>
+    <div class='form-group'>
+        <label for='confirm' class='cols-sm-2 control-label'>Gender</label>
+        <div class='cols-sm-10'>
+            <div class='input-group'>
+                <span class='input-group-addon'><i class='fa fa-lock fa-lg' aria-hidden='true'></i></span>
+                {{#if gender}}
+                <input type='radio' id="male" name='gender' value="Male" checked="checked" />
+                &nbsp;
+                <label for="male">Male</label>
+                &nbsp;
+                <input type='radio' id="female" name='gender' value="Female" />
+                &nbsp;
+                <label for="female">Female</label>
+                {{else}}
+                <input type='radio' id="male" name='gender' value="Male" />
+                &nbsp;
+                <label for="male">Male</label>
+                &nbsp;
+                <input type='radio' id="female" name='gender' value="Female" checked="checked" />
+                &nbsp;
+                <label for="female">Female</label>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <div class='form-group'>
+        <label for='confirm' class='cols-sm-2 control-label'>Date Of Birth</label>
+        <div class='cols-sm-10'>
+            <div class='input-group'>
+                <span class='input-group-addon'><i class='fa fa-lock fa-lg' aria-hidden='true'></i></span>
+                <input type='date' class='form-control' name='dateOfBirth' id='dateOfBirth'
+                    value="{{animal.dateOfBirth}}" required />
+            </div>
+        </div>
+    </div>
+    <div class='form-group'>
+        <label for='confirm' class='cols-sm-2 control-label'>Age</label>
+        <div class='cols-sm-10'>
+            <div class='input-group'>
+                <span class='input-group-addon'><i class='fa fa-lock fa-lg' aria-hidden='true'></i></span>
+                <input type='text' class='form-control' name='age' id='age' value="{{animal.age}}" required />
+            </div>
+        </div>
+    </div>
+    <div class='form-group'>
+        <label for='confirm' class='cols-sm-2 control-label'>Is Transportable?</label>
+        <div class='cols-sm-10'>
+            <div class='input-group'>
+                <span class='input-group-addon'><i class='fa fa-lock fa-lg' aria-hidden='true'></i></span>
+                {{#if available}}
+                <input type='radio' id="available" name='isTransportable' value="true" checked="checked" />
+                &nbsp;
+                <label for="available">Available</label>
+                &nbsp;
+                <input type='radio' id="unavailable" name='isTransportable' value="false" />
+                &nbsp;
+                <label for="unavailable">Unavailable</label>
+                {{else}}
+                <input type='radio' id="available" name='isTransportable' value="true" />
+                &nbsp;
+                <label for="available">Available</label>
+                &nbsp;
+                <input type='radio' id="unavailable" name='isTransportable' value="false" checked="checked" />
+                &nbsp;
+                <label for="unavailable">Unavailable</label>
+                {{/if}}
+            </div>
+        </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-<form action="/delete-animal/{{id}}" method="post">
+<form action="/animals/delete-animal/{{id}}" method="post">
     <input type="hidden" name="hiddenInput" />
     <button type="submit" class="btn btn-secondary">Delete Record</button>
 </form>

@@ -1,3 +1,9 @@
+/**
+ * Name: Stevenson Suhardy
+ * Student ID: 100839397
+ * Date Completed: April 20, 2023
+ */
+
 const express = require("express");
 const exphbs = require("express-handlebars");
 const dotenv = require("dotenv");
@@ -36,6 +42,7 @@ app.set("views", "./views");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Router
 app.use('/', require("./routes/animal.js"));
 
 app.listen(PORT, () => {

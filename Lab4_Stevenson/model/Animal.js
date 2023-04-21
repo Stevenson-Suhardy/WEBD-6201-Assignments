@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
+// Creating a new animal schema
 const AnimalSchema = new Schema({
     zoo: {
         type: String,
@@ -35,6 +35,6 @@ const AnimalSchema = new Schema({
         required: true,
     },
 });
-
+// Creating a new model
 const Animal = mongoose.model("Animal", AnimalSchema);
 module.exports = Animal;
